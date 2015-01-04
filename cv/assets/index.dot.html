@@ -1,0 +1,40 @@
+{
+    "template": 		"master",
+    "title": 			"Павел Чайковский — резюме",
+    "description": 		"resume, cv, front-end, html5, css3, grunt, резюме, верстальщик"
+}
+
+<div class="page__container">
+    <div class="grid__row">
+        <div class="grid__col grid__col_xs_12 grid__col_sm_4">
+            <div class='logo logo_circle'>
+                <img src="img/photo.jpg" class="logo__img" alt="">
+            </div>
+        </div>
+        <div class="grid__col grid__col_xs_12 grid__col_sm_8">
+            <header class="head">
+            	<h1>Павел Чайковский</h1>
+            	<h2>Front-end разработчик</h2>
+            </header>
+        </div>
+    </div>
+
+	<div class="grid__row">
+		<div class="grid__col grid__col_xs_12 grid__col_sm_4">
+			{{= it.include('cnt/personal') }}
+		</div>
+		<div class="grid__col grid__col_xs_12 grid__col_sm_8">
+			{{= it.include('cnt/about') }}
+
+			{{= it.include('cnt/skills') }}
+
+			{{= it.include('cnt/experience') }}
+
+			{{= it.include('cnt/education') }}
+
+			{{= it.include('cnt/additional') }}
+		</div>
+	</div>
+</div>
+
+{{= it.include("footer") }}

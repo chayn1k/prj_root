@@ -1,0 +1,39 @@
+.head
+	margin-bottom $indent
+	padding-bottom round($indent / 2)
+	border-bottom 3px dotted #000
+
+	text-align center
+
+	h1
+		font-size 2.5em
+		margin-top 0
+		margin-bottom round($indent / 2)
+		text-transform uppercase
+
+		&::first-letter
+			//font-size 1.2em
+			color $c_highlight
+
+	h2
+		font-size 1.5em
+		font-weight normal
+		margin-top 0
+		margin-bottom round($indent / 2)
+		color $c_highlight
+		
+	
+	+media('tablet')
+		&
+			text-align left
+
+		h1
+			font-size 4em
+
+		h2
+			font-size 2.4em
+
+	+media('desk')
+		&
+			margin-left $mnote_w + $indent
+			padding-left $indent

@@ -1,0 +1,36 @@
+.personal
+	margin-top $indent
+	margin-bottom $indent * 2
+
+	h2
+		text-transform uppercase
+		color $c_highlight
+		margin-bottom .5em
+		text-align right
+
+	dl
+		margin 0
+
+	dt
+		font-size $fz_bigger
+		line-height 1.4
+		font-weight bold
+
+	dd 
+		margin-left $indent
+		margin-bottom .8em
+		color $c_light
+
+	+media('tablet')
+		h2
+			text-align left
+
+	+media('desk')
+		h2
+			text-align right
+
+		dl
+			text-align right
+
+		dd
+			margin-left 0

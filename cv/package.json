@@ -1,0 +1,47 @@
+{
+  "name":     "pavel.tchaikovsky.tk",
+  "version":  "0.1.0",
+  "license":  "MIT",
+  "homepage": "http://pavel.tchaikovsky.tk/cv/",
+  "git":      "https://github.com/chayn1k/cv/",
+  "authors": [
+    "Pavel Tchaikovsky <me@chayn1k.ru>"
+  ],
+  "private": false,
+  "engine": "node >= 0.10",
+  "main": "./index.html",
+  "dependencies": {
+    "grunt": "*",
+    "grunt-exec": "*",
+    "grunt-open": "*",
+    "grunt-newer": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-stencil": "*",
+    "grunt-devcode": "*",
+    "grunt-autoprefixer": "*",
+    "load-grunt-tasks": "*",
+    "time-grunt": "*",
+    "less": "*",
+    "stylus": "*",
+    "csso-stylus": "*",
+    "autoprefixer": "*",
+    "autoprefixer-stylus": "*"
+  },
+  "devDependencies": {
+    "socket.io": "*",
+    "nib": "*",
+    "if-ie.styl": "git://github.com/kizu/if-ie.styl.git"
+  },
+  "scripts": {
+    "preinstall": "npm i -g optipng jpegtran gifsicle"
+  },
+  "readmeFilename": "README.md"
+}

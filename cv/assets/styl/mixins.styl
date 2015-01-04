@@ -1,0 +1,54 @@
+// Clearfix
+clearfix()
+    zoom 1 if ie
+    &:before
+    &:after
+        display: table
+        content: " "
+
+    &:after
+        clear: both
+
+
+// Media Queries
+$media_aliases = {
+    phone:      '(max-width: 479px)'
+    smartphone: '(min-width: 480px)'
+    tablet:     '(min-width: 768px)'
+    desk:       '(min-width: 992px)'
+    desk-wide:  '(min-width: 1200px)'
+}
+
+media( $media )
+    if $media
+        $mq = unquote($media_aliases[$media] || $media)
+        $mq = '(%s)' % $mq unless match('\(', $mq)
+        $mq = 'only screen and %s' % $mq
+        @media $mq
+            {block}
+    else
+        {block}
+
+
+// Grids
+common-col-styles()
+    position relative
+    float left
+    min-height 1px
+    padding-left  unit( $gutter_width / 2, 'px' )
+    padding-right unit( $gutter_width / 2, 'px' )
+    box-sizing border-box
+
+make-row()
+    clearfix()
+    margin-left unit( $gutter_width / -2, 'px' )
+    margin-right unit( $gutter_width / -2, 'px' )
+
+make-col( $col, $media = '' )
+
+    common-col-styles()
+
+    +media($media)
+        width unit( $col / $columns * 100, '%' )
+
+

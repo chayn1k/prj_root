@@ -1,0 +1,23 @@
+.logo
+	margin-bottom $indent
+	
+	&__img
+		max-width 100%
+		height auto
+
+	+media('desk')
+		&
+			float right
+
+
+.logo_circle
+	height 180px
+	width @height
+	border-radius round(@height / 2)
+	overflow hidden
+
+	@media (max-width: 991px)
+		&
+			position relative
+			left 50%
+			margin-left round(@width / -2)

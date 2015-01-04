@@ -1,0 +1,38 @@
+.page
+	margin 0
+	padding 0
+	font-family $ff_Cuprum
+	font-size $fz_default
+	color $c_default 
+
+	&__container
+		position relative
+		max-width 980px
+		margin-left auto
+		margin-right auto
+		padding-left $indent
+		padding-right $indent
+		padding-top $indent
+
+	&__footer
+		height 35px
+		background $c_highlight
+
+
+
+	+media('tablet')
+
+		&__container
+			&:before
+				content ''
+				display block
+				width 100%
+				position absolute
+				top 0
+				bottom 0
+				right unit( ($columns - 4) / $columns * 100, '%' )
+				background #ecf0f1
+				z-index -1
+
+			
+

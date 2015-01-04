@@ -1,0 +1,93 @@
+.section
+	margin-bottom $indent * 2
+	
+
+	&__title
+		margin-bottom round($indent / 2)
+		color $c_highlight
+		text-transform uppercase
+		text-align right
+
+	&__main
+		padding-top round($indent / 2)
+		padding-bottom round($indent / 2)
+
+		p:first-child
+			margin-top 0
+
+	&__row
+		clearfix()
+		position relative
+		margin-bottom .4em
+
+	&__cnt
+		margin-left $indent
+		box-sizing border-box
+
+	&__mnote
+		margin-top 0
+		margin-bottom 0
+		color $c_highlight
+		font-size 1em
+		//font-weight normal
+
+	&__list
+		font-size $fz_smaller
+		padding-left $indent
+
+	&__list-title
+		font-size $fz_smaller
+		font-style italic
+
+	+media('tablet')
+		&__title
+			text-align left
+
+	+media('desk')
+		&
+			margin-left $mnote_w + $indent
+
+		&__title
+			padding-left $indent
+			text-align left
+
+		&__main
+			padding-left $indent
+
+		&__cnt
+			margin-left 0
+
+		&__mnote
+			margin-top 0
+			margin-bottom 0
+			float left
+			text-align right
+			width $mnote_w
+			margin-left -($mnote_w + $indent)
+
+
+
+.section_timeline
+	.section
+		
+		+media('desk')
+			&__main
+				border-left $mnote_bdw dotted $c_highlight
+
+			&__mnote
+				position relative
+				margin-left -($mnote_w + $indent * 2)
+
+				&:after
+					content ''
+					display block
+					width 10px
+					height @width
+					position absolute
+					top 50%
+					right  round(($mnote_bdw - @width) / 2) - $indent 
+					margin-top round(@width / -2)
+
+					background $c_highlight
+					border-radius round(@width / 2)
+
